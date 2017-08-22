@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<table style="width:100%", border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Published</th>
+        <th>Last modified</th>
+    </tr>
+    {% for product in products %}
+    <tr>
+        <td>{{ product.id }}</td>
+        <td>{{ product.product_name }}</td>
+        <td>{{ product.product_description }}</td>
+        <td>{{ product.published }} </td>
+        <td>{{ product.last_modified }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<br>
+<br>
+<div style="width:100%;height:100%;position:absolute;vertical-align:middle;text-align:center;">
+    <a href="/addproduct/"><input type="submit" value="Dodaj nowy produkt"></a>
+</div>
